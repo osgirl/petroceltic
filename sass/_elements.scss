@@ -1,0 +1,458 @@
+p {
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 13px;
+	line-height: 16px;
+	font-weight: 400;
+	color: $gray;
+
+	b {
+		font-weight: 700;
+	}
+	@media #{$desktop} {
+		font-size: 15px;
+		line-height: 20px;
+		font-weight: 300;
+	}
+}
+
+p.intro {
+	font-size: 16px;
+	line-height: 20px;
+	font-weight: 300;
+	@media #{$tablet} {
+		font-size: 18px;
+		line-height: 24px;
+	}
+}
+
+h2 {
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 32px;
+	line-height: 32px;
+	font-weight: 200;
+	text-transform: uppercase;
+	color: $orange;
+
+	@media #{$desktop} {
+		font-size: 36px;
+		line-height: 36px;
+	}
+}
+
+h3 {
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 14px;
+	line-height: 16px;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: $orange;
+	@media #{$tablet} {
+		font-size: 16px;
+	}
+}
+
+h4 {
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 13px;
+	line-height: 16px;
+	font-weight: 400;
+	color: $gray;
+	font-style: italic;
+
+	@media #{$desktop} {
+		font-size: 15px;
+		line-height: 20px;
+		font-weight: 300;
+	}
+}
+
+.download {
+	
+	a {
+		
+		font-size: 13px;	
+		line-height: 16px;
+		color: $gray;
+
+		@media #{$desktop} {
+			font-size: 15px;
+		}
+
+		display: block;
+		text-decoration: none;
+		
+		position: relative;
+		padding-left: 20px;
+
+		@media #{$desktop} {
+			padding-left: 24px;
+		}
+		
+		> span:first-child {
+			position: absolute;
+			font-size: 1.2em;
+			left: -4px;
+			top: 0;
+			color: $orange;
+		}
+		> span:last-child {
+			font-family: 'Titillium Web', sans-serif;
+			font-weight: 700;
+			span {
+				font-weight: 400;
+			}
+		}
+
+		&:hover {
+			text-decoration: underline;
+		}	
+	}
+}
+
+.scroll_area {
+	
+	width: 100%;
+	height: 56px;
+	position: relative;
+
+	@media #{$tablet} {
+		height: 72px;
+	}
+	
+	> div:first-child {
+		height: 100%;
+		width: 100%;
+		top: -28px;
+		position: absolute;
+		z-index: 2;
+
+		@media #{$tablet} {
+			top: -36px;
+		}
+
+		.button {
+			width: 32px;
+			height: 32px;
+			position: absolute;
+			left: 50%;
+			margin-left: -16px;
+			top: 12px;
+			background: $gray_2;
+			cursor: pointer;
+			@include border-radius(16px);
+			@include trans(.2s);
+
+			span {
+				color: white;
+				display: block;
+				position: absolute;
+				top: 6px;
+				left: 5px;
+				pointer-events: none;
+
+				@media #{$tablet} {
+					font-size: 24px;
+					top: 10px;
+					left: 7px;
+				}
+			}
+
+			@media #{$tablet} {
+				width: 48px;
+				height: 48px;
+				margin-left: -24px;
+				@include border-radius(24px);
+			}
+
+			&:hover {
+				background-color: $orange;
+				@include scale(1.2);
+			}
+		}
+	}
+
+	> div:last-child {
+		background-color: $gray_0;
+		height: 100%;
+		width: 100%;
+	}
+}
+.highlights {
+	li {
+		
+		position: relative;	
+		padding-left: 16px;
+
+		@media #{$tablet} {
+			padding-left: 20px;
+		}
+		
+		span:first-child {
+			color: $yellow;
+			position: absolute;
+			left: -4px;
+			top: 2px;
+			@media #{$tablet} {
+				left: -6px;
+				top: 4px;
+			}
+		}
+		span:last-child {
+			font-family: 'Titillium Web', sans-serif;
+			font-size: 16px;
+			line-height: 20px;
+			font-weight: 300;
+			color: white;
+
+			@media #{$tablet} {
+				font-size: 18px;
+				line-height: 24px;
+			}
+		}
+	}
+	li + li {
+		margin-top: 10px;
+
+		@media #{$tablet} {
+			margin-top: 12px;
+		}
+	}
+}
+
+.highlights_small {
+	li {
+		
+		position: relative;
+		padding: 0px 0px 4px 16px;
+		
+		span:first-child {
+			color: $orange;
+			position: absolute;
+			left: -7px;
+			top: 0;
+		}
+		span:last-child {
+			font-family: 'Titillium Web', sans-serif;
+			font-size: 13px;
+			line-height: 16px;
+			font-weight: 400;
+			color: $gray;
+
+			@media #{$desktop} {
+				font-size: 15px;
+				line-height: 20px;
+				font-weight: 300;
+			}
+		}
+	}
+}
+.chart {
+	> div:first-child {
+		h4 {
+			color: white;
+		}
+	}
+	> div:nth-child(2), > div:last-child {
+		font-family: 'Titillium Web', sans-serif;
+		font-size: 13px;
+		line-height: 24px;
+		font-weight: 400;
+		color: white;
+		display: table;
+		margin-top: 8px;
+		width: 100%;
+		height: 24px;
+
+		@media #{$desktop} {
+			font-size: 14px;
+			line-height: 24px;
+			font-weight: 300;
+		}
+		
+		> span:first-child {
+			display: table-cell;
+			width: 36px;
+			vertical-align: top;
+		}
+		> div {
+			display: table-cell;
+			vertical-align: top;
+			height: 100%;
+			background-color: $fallback-black-60;
+			background-color: rgba(#000, .3);
+			padding: 4px 0 4px 4px;
+
+			> div {
+				height: 100%;
+				position: relative;
+
+				/* max-width: 0; */
+				@include trans(.5s);
+
+				> span:first-child {
+					width: 100%;
+					height: 100%;
+					background-color: white;
+					display: block;
+				}
+
+				>span:last-child {
+					width: 4px;
+					height: 100%;
+					background-color: $yellow;
+					display: block;
+					position: absolute;
+					z-index: 2;
+					right: 0;
+					top: 0;
+				}
+			}
+
+		}
+		> span:last-child {
+			display: table-cell;
+			vertical-align: top;
+			text-align: right;
+			width: 64px;
+			padding-right: 8px;
+			background-color: $fallback-black-60;
+			background-color: rgba(#000, .3);
+		}
+	}
+}
+.chart + .chart {
+	margin-top: 24px;
+}
+
+.map_details {
+	
+	@include clearfix();
+
+	h4 {
+		color: white;
+	}
+	.map_wrapper {
+		
+		margin-bottom: 32px;
+
+		@include clearfix();
+
+		@media #{$tb-pt} {
+			width: 33.33333%;
+			float: left;
+		}
+
+		.picture {
+			width: 100%;
+			padding-top: 60%;
+			position: relative;
+
+			@media #{$tablet} {
+				width: 50%;
+				padding-top: 0;
+				height: 256px;
+				float: left;
+			}
+
+			@media #{$tb-pt} {
+				width: 100%;
+				float: none;
+			}
+
+			span {
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				right: 0px;
+				bottom: 0px;
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: cover;
+
+				@media #{$tablet} {
+					top: 16px;
+					left: 16px;
+					right: 8px;
+					bottom: 0px;
+				}
+			}
+		}
+		.legend {
+			
+			@media #{$tablet} {
+				width: 50%;
+				float: right;
+				padding: 60px 16px 0 8px;
+				height: 256px;
+
+				div:first-child {
+					border-top: 1px solid $light_gray;
+				}
+			}
+
+			@media #{$tb-pt} {
+				width: 100%;
+				float: none;
+				height: auto;
+				padding: 0 8px 0 16px;
+
+				div:first-child {
+					border-top: none;
+				}
+			}
+
+			div {
+				color: white;
+				font-family: 'Titillium Web', sans-serif;
+				font-size: 16px;
+				font-weight: 300;
+				line-height: 42px;
+				position: relative;
+				border-bottom: 1px solid $light_gray;
+				span {
+					display: block;
+					position: absolute;
+					right: 0;
+					top: 0;
+					font-size: 18px;
+				}
+			}
+		}
+	}
+	.text_wrapper {
+
+		@media #{$tablet} {
+			padding: 0 16px;
+		}
+
+		@media #{$tb-pt} {
+			width: 66.66666%;
+			float: right;
+			padding: 0 16px 0 8px;
+		}
+
+		.details {
+			
+			@include clearfix();
+
+			padding-bottom: 16px;
+			> div {
+				width: 50%;
+				float: left;
+
+				p {
+					color: white;
+					padding-top: 16px;
+				}
+			}
+
+			> div:first-child {
+				padding-right: 8px;
+			}
+
+			> div:last-child {
+				padding-left: 8px;
+			}
+		}
+	}
+}

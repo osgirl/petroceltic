@@ -1,0 +1,226 @@
+header {
+	
+	position: fixed;
+	z-index: 1000;
+	width: 100%;
+	top: -56px;
+	left: 0;
+
+	@include trans(.3s);
+
+	&.show {
+		top: 0;
+	}
+
+	@media #{$tablet} {
+		top: -72px;
+	}
+	
+	.top_bar {
+		height: 56px;
+		width: 100%;
+		background-color: white;
+		border-bottom: 1px solid $light_gray;
+
+		@media #{$tablet} {
+			height: 72px;
+		}
+
+		> div {
+			padding: 0 32px;
+
+			@include clearfix();
+
+			@media #{$tb-pt} {
+				padding: 0 64px;
+			}
+
+			@media #{$desktop} {
+				padding: 0 72px;
+				width: 1280px;
+				margin: 0 auto;
+			}
+
+			.logo {
+				
+				float: left;
+
+				> div:first-child {
+					
+					float: left;
+					height: 56px;
+					padding-top: 13px;
+					position: relative;
+
+					@media #{$tablet} {
+						height: 72px;
+						padding-top: 16px;
+						padding-right: 32px;
+					}
+					
+					span {
+						@include logo(26px);
+
+						@media #{$tablet} {
+							@include logo(34px);
+						}
+					}
+				}
+				> span:last-child {
+					display: none;
+					
+					@media #{$tablet} {
+						
+						display: block;
+						float: left;
+						border-left: 1px solid $light_gray;
+						padding-left: 32px;
+						font-family: 'Titillium Web', sans-serif;
+						font-size: 18px;
+						line-height: 72px;
+						font-weight: 300;
+						color: $gray;
+					}
+				}
+			}
+			.menus {
+				
+				float: right;
+				margin-right: -32px;
+				position: relative;
+				@include clearfix();
+
+				@media #{$tb-pt} {
+					margin-right: 0;
+					border-right: 1px solid $light_gray;
+				}
+				
+				.open_menu, .download_menu {
+					
+					float: left;
+					height: 56px;
+					width: 56px;
+					border-left: 1px solid $light_gray;
+					position: relative;
+					cursor: pointer;
+
+					@include trans(.3s);
+
+					@media #{$tablet} {
+						height: 72px;
+						width: 72px;
+					}
+					
+					span {
+						position: absolute;
+						top: 15px;
+						left: 9px;
+						font-size: 24px;
+						pointer-events: none;
+						color: $orange;
+						@media #{$tablet} {
+							top: 18px;
+							left: 12px;
+							font-size: 32px;
+						}
+					}
+				}
+
+				.open_menu:hover, .download_menu:hover, .open_menu.active, .download_menu.active {
+					background-color: $orange;
+					span {
+						color: white;
+					}
+				}
+			}
+		}
+		
+		nav {
+			clear: both;
+			background: $orange;
+
+			#sections-menu {
+				display: none;
+
+				ul {
+					padding: 0 32px;
+					
+					@media #{$tablet} {
+						text-align: center;
+					}
+
+					li {
+						font-family: 'Titillium Web', sans-serif;
+						font-size: 16px;
+						line-height: 20px;
+						color: white;
+						font-weight: 300;
+						padding: 16px 0;
+						cursor: pointer;
+						&:hover {
+							span {
+								text-decoration: underline;
+							}
+						}
+
+						@media #{$tablet} {
+							display: inline-block;
+							padding: 16px 8px;
+						}
+
+					}
+
+					li + li {
+						border-top: 1px solid $light_gray;
+
+						@media #{$tablet} {
+							border-top: none;
+						}
+					}
+				}
+			}
+
+			#download-menu {
+				display: none;
+				> div {
+					padding: 16px 32px;
+
+					@media #{$tablet} {
+						text-align: center;
+					}
+				}
+				.download {
+					a {
+						font-size: 16px;
+						line-height: 20px;
+						color: white;
+						padding-left: 24px;
+
+						> span:first-child {
+							color: $yellow;
+						}
+					}
+
+					@media #{$tablet} {
+						display: inline-block;
+						padding-left: 8px;
+						padding-right: 8px;
+					}
+				}
+
+				.download + .download {
+					border-top: 1px solid $light_gray;
+					padding-top: 16px;
+					margin-top: 16px;
+
+					@media #{$tablet} {
+						border-top: none;
+						margin-top: 0;
+						padding-top: 0;
+					}
+				}
+			}
+
+		}
+	}
+}

@@ -1,0 +1,164 @@
+#operations {
+	
+	.scroll_area {
+		> div:last-child {
+			background-color: transparent;
+		}
+	}
+
+	padding: 0 0 32px 0;
+	position: relative;
+
+	@media #{$tablet} {
+		padding: 0 0 64px 0;
+	}
+
+	@media #{$desktop} {
+		padding: 0 0 72px 0;
+	}
+
+	.wrapper {
+		padding: 32px 32px 0 32px;
+
+		@media #{$tablet} {
+			padding: 64px 64px 0 64px;
+		}
+		@media #{$desktop} {
+			padding: 72px 72px 0 72px;
+			max-width: 1280px;
+			margin: 0 auto;
+		}
+	}
+
+	.mobile {
+		h2 + div {
+			padding-top: 16px;
+			background-color: $fallback-black-30;
+			background-color: rgba(#000, .3);
+		}
+		h2 {
+			padding: 32px 16px 16px 16px;
+			background-color: $fallback-black-60;
+			background-color: rgba(#000, .6);
+			color: $yellow;
+		}
+
+		h3 {
+			color: $yellow;
+		}
+		.highlights {
+			padding: 8px 0 16px 0;
+		}
+		.details {
+			display: none;
+		}
+		.country {
+			padding: 0 16px 0 16px;
+			.button {
+				border-top: 1px solid $yellow;
+				padding: 16px 0;
+				position: relative;
+				span {
+					color: $yellow;
+					position: absolute;
+					top: 16px;
+					right: 0;
+				}
+			}
+			.content_wrapper {
+				padding-bottom: 16px;
+			}
+		}
+		.country.closed {
+			.content_wrapper {
+				display: none;
+			}
+		}
+	}
+
+	.desktop-tablet {
+		
+		.slider_content {
+			background-color: $fallback-black-30;
+			background-color: rgba(#000, .3);
+
+			@media #{$tablet} {
+				background: transparent;
+			}
+		}
+
+		h2 {
+			padding: 36px 16px 16px 16px;
+			background-color: $fallback-black-60;
+			background-color: rgba(#000, .6);
+			color: $yellow;
+		}
+
+		h4 {
+			color: $yellow;
+			border-top: 1px solid $yellow;
+			padding: 16px 0;
+			margin-top: 16px;
+			font-size: 16px;
+			line-height: 16px;
+			font-weight: 700;
+			text-transform: uppercase;
+			font-style: normal;
+		}
+		p.intro {
+			color: white;
+		}
+
+		.nav_bar {
+			.button {
+				width: 20%;
+			}
+		}
+
+		.slide {
+			> div.half + div.half {
+				margin-top: 16px;
+			}
+		}
+		.map_details {
+			@media #{$tablet} {
+				background-color: $fallback-black-30;
+				background-color: rgba(#000, .3);
+			}
+		}	
+	}
+
+	#algeria-content .picture span {
+		background-image: url('../images/algeria-map.jpg');
+	}
+	#egypt-content .picture span {
+		background-image: url('../images/egypt-map.jpg');
+	}
+	#bulgaria-content .picture span {
+		background-image: url('../images/bulgaria-map.jpg');
+	}
+	#romania-content .picture span {
+		background-image: url('../images/romania-map.jpg');
+	}
+	#kurdistan-content .picture span {
+		background-image: url('../images/kurdistan-map.jpg');
+	}
+	#italy-content .picture span {
+		background-image: url('../images/italy-map.jpg');
+	}
+	#greece-content .picture span {
+		background-image: url('../images/greece-map.jpg');
+	}
+
+	.download {
+		background-color: $fallback-black-60;
+		background-color: rgba(#000, .6);
+		padding: 16px;
+		a {
+			color: white;
+			> span:first-child {
+				color: $yellow;
+			}
+		}
+	}
+}

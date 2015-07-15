@@ -1,0 +1,42 @@
+/* media query variables */
+
+$small: "only screen and (min-width : 768px)";
+$medium: "only screen and (min-width : 1024px)";
+$large: "only screen and (min-width : 1280px)";
+$x-large: "only screen and (min-width : 1440px)";
+
+/* layout variables */
+
+$mb-outer-mg: 10%;
+$mb-inner-mg: 6.25%;
+
+/* Colours */
+
+$orange: #f48024;
+$gray: #53585a;
+$light_gray: rgb(220, 220, 220);
+$yellow: #ffdc00;
+
+$border-1: rgba(255, 255, 255, .3);
+$back-1: rgba(0, 0, 0, .3);
+$back-2: rgba(0, 0, 0, .5);
+$back-3: rgba(240, 240, 240, .9);
+$back-4: rgba(240, 240, 240, .4);
+$back-5: rgb(240, 240, 240);
+$back-6: rgba(255, 255, 255, .6);
+
+
+
+/* Mixins */
+
+@mixin logo($height, $top, $left) {
+	height: $height;
+	width: $height * 5.1;
+	top: $top;
+	left: $left;
+	cursor: pointer;
+	position: absolute;
+	background-image: url('../img/logo-header.png');
+	background-repeat: no-repeat;
+	background-size: auto 100%;
+}

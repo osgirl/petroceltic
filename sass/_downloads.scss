@@ -1,0 +1,77 @@
+#scroll-5 {
+	background-color: $gray_0;
+}
+#downloads {
+	
+	padding: 0 0 32px 0;
+	position: relative;
+
+	@media #{$tablet} {
+		padding: 0 0 64px 0;
+		background-color: $gray_0;
+	}
+
+	@media #{$desktop} {
+		padding: 0 0 72px 0;
+	}
+
+	.wrapper {
+		padding: 0 32px;
+
+		@media #{$tablet} {
+			padding: 36px 64px 0 64px;
+		}
+		@media #{$desktop} {
+			padding: 36px 72px 0 72px;
+			max-width: 1280px;
+			margin: 0 auto;
+		}
+	}
+	h2 {
+		padding-top: 24px;
+	}
+	
+	.download {
+		
+		margin-bottom: 8px;
+
+		@media #{$desktop} {
+			margin-bottom: 12px;
+		}
+
+		&.title {
+			a {
+				color: $orange;
+			}
+			border-bottom: 1px solid $light_gray;
+			margin: 16px 0;
+			padding-bottom: 8px;
+
+			@media #{$desktop} {
+				margin: 24px 0;
+				padding-bottom: 12px;
+			}
+		}
+		&.full {
+			width: 100%;
+			padding: 16px;
+			background-color: white;
+			margin: 24px 0 8px 0;
+			
+			@media #{$desktop} {
+
+			}
+		}
+	}
+	.row {
+		@include clearfix();
+	}
+	@media #{$tablet} {
+		.box {
+			width: 50%;
+			padding: 0 8px;
+			float: left;
+		}
+	}
+		
+}

@@ -1,0 +1,4 @@
+<div class="text">
+	<h2>Chief Executive’s<br>Review</h2>
+	<p>Petroceltic had a busy year in 2014, with material activity both in our operations and strategic direction of the business. The Group’s flagship project in Algeria was a key area of focus and success, with important posts filled, major contracts advanced, a second farmout successfully concluded and the Groupement, or joint operations team, functioning effectively. We also achieved our production guidance, successfully raised $100m through an oversubscribed share placing and renewed our Egyptian business through the acquisition of highly prospective new acreage. Less positively, however, we had a number of disappointments within our exploration portfolio, while the withdrawal of a proposal to acquire Petroceltic by Dragon Oil deprived shareholders the chance to consider a potential cash bid.<br><br><b>Brian O’Cathain</b><br>Chief Executive</p>
+</div>

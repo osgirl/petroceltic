@@ -1,0 +1,53 @@
+.slider_wrapper {
+	
+}
+
+.slider_control {
+
+	display: none;
+
+	@media #{$tablet} {
+
+		display: block;
+
+		.nav_bar {
+			display: table;
+			width: 100%;
+			margin-bottom: 16px;
+
+			.button {
+				
+				font-family: 'Titillium Web', sans-serif;
+				font-size: 16px;
+				line-height: 18px;
+				font-weight: 300;
+				color: white; 
+				padding: 15px 0;
+				text-align: center;
+				display: table-cell;
+				cursor: pointer;
+
+				background-color: $fallback-black-30;
+				background-color: rgba(#000, .3);
+
+				@include trans(.3s);
+				
+				&.active {
+					background-color: $fallback-black-60;
+					background-color: rgba(#000, .6);
+					color: white;
+				}
+
+				&:hover {
+					color: $yellow;
+				}
+			}
+		}
+	} 
+}
+.slider_content {
+	width: 100%;
+	.slide.hidden {
+		display: none;
+	}
+}

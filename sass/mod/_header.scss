@@ -1,0 +1,152 @@
+header {
+	
+	width: 100%;
+	@include min-height(100%);
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 200;
+	
+	pointer-events: none;
+
+	/* top bar wrapper */
+	#top-bar {
+		
+		pointer-events: auto;
+
+		height: 56px;
+		margin-top: -56px;
+		background: $back-3;
+
+		@include transition-property(all);
+  		@include transition-duration(.2s);
+ 		@include transition-timing-function(ease-in-out);
+
+ 		@media #{$small} {
+			height: 80px;
+			margin-top: -80px;
+		}
+ 		/* top bar contents */
+
+ 		> div {
+ 			
+ 			height: 100%;
+ 			margin: 0 32px;
+
+ 			@media #{$small} {
+ 				margin: 0 64px;
+ 			}
+
+ 			@media #{$large} {
+ 				margin: 0 96px;
+ 			}
+ 			@media #{$x-large} {
+ 				width: 1248px;
+ 				margin: 0 auto;
+ 			}
+
+ 			position: relative;
+ 			/* logo */
+	 		> div:first-child {
+	 			
+	 			@include logo(24px, 16px, 0);
+
+				@media #{$small} {
+					@include logo(32px, 24px, 0);
+				}
+	 		}
+
+	 		/* title */
+	 		> div:nth-child(2) {
+	 			display: none;
+
+	 			@media #{$small} {
+	 				display: block;
+	 				position: absolute;
+	 				top: 0;
+	 				left: 200px;
+
+	 				font-family: 'Titillium Web', sans-serif;
+	 				color: $gray;
+	 				font-size: 18px;
+	 				line-height: 80px;
+	 				font-weight: 300;
+
+	 				border-left: 1px solid white;
+
+	 				padding-left: 32px;
+	 				span {
+	 					color: $orange;
+	 				}
+	 			}
+
+	 			@media #{$medium} {
+	 				font-size: 20px;
+	 			}
+	 		}
+
+	 		/* button  wrapper */ 
+	 		.open_menu {
+	 			position: absolute;
+	 			right: 0;
+	 			top: 0;
+	 			height: 56px;
+	 			width: 56px;
+	 			cursor: pointer;
+
+	 			@media #{$small} {
+	 				height: 80px;
+	 				width: 80px;
+	 			}
+	 			border-left: 1px solid white;
+	 			border-right: 1px solid white;
+	 			span {
+	 				
+	 				position: absolute;
+  					font-size: 32px;
+  					top: 12px;
+  					left: 10px;
+  					color: $gray;
+
+  					@include transition-property(all);
+  					@include transition-duration(.2s);
+ 					@include transition-timing-function(ease-in-out);
+
+	 				@media #{$small} {
+	 					font-size: 44px;
+  						top: 16px;
+  						left: 16px;
+	 				}
+	 			}
+
+	 			&:hover {
+	 				span {
+	 					color: $orange;
+	 				}
+	 				
+	 			}
+	 		}
+ 		}
+ 		&.show {
+ 			margin-top: 0;
+ 		}
+	}
+	
+
+	/* menu container */
+	> div:last-child {
+
+		pointer-events: auto;
+
+		background-color: $orange;
+		width: 100%;
+		margin-left: -100%;
+		@include min-height(100%);
+
+		@include transition-property(all);
+  		@include transition-duration(1s);
+ 		@include transition-timing-function(ease-in-out);	
+	}
+
+}

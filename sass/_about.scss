@@ -1,0 +1,178 @@
+#about {
+	
+	
+	padding: 88px 32px 32px 32px;
+	position: relative;
+
+	@media #{$tablet} {
+		padding: 136px 64px 64px 64px;
+	}
+
+	@media #{$desktop} {
+		padding: 144px 72px 72px 72px;
+		width: 1280px;
+		margin: 0 auto;
+	}
+
+	.mobile {
+		> div + div {
+			margin-top: 16px;
+		}
+
+		h2 {
+			padding: 32px 16px 16px 16px;
+			background-color: $fallback-black-60;
+			background-color: rgba(#000, .6);
+			color: $yellow;
+		}
+
+		h3 {
+			color: $yellow;
+		}
+
+		> div > div > h4 {
+			color: white;
+			padding: 16px 16px 0 16px;
+			background-color: $fallback-black-30;
+			background-color: rgba(#000, .3);
+		}
+		p.intro {
+			color: white;
+			padding: 16px;
+			background-color: $fallback-black-30;
+			background-color: rgba(#000, .3);
+		}
+		.highlights {
+			background-color: $fallback-black-30;
+			background-color: rgba(#000, .3);
+			padding: 16px;
+		}
+		.kpi {
+			background-color: $fallback-black-30;
+			background-color: rgba(#000, .3);
+			padding: 0 16px 0 16px;
+			.button {
+				border-top: 1px solid $yellow;
+				padding: 16px 0;
+				position: relative;
+				span {
+					color: $yellow;
+					position: absolute;
+					top: 16px;
+					right: 0;
+				}
+			}
+			.content_wrapper {
+				padding-bottom: 16px;
+			}
+		}
+		.kpi.closed {
+			.content_wrapper {
+				display: none;
+			}
+		}
+	}
+
+	.desktop-tablet {
+		
+		h2 {
+			padding: 36px 16px 16px 16px;
+			background-color: $fallback-black-60;
+			background-color: rgba(#000, .6);
+			color: $yellow;
+		}
+
+		h3 {
+			color: $yellow;
+			border-top: 1px solid $yellow;
+			padding: 16px 0;
+			margin-top: 16px;
+		}
+		p.intro {
+			color: white;
+		}
+
+		.nav_bar {
+			.button {
+				width: 50%;
+			}
+		}
+
+		#about-content {
+			margin-bottom: 16px;
+			p.intro {
+				background-color: $fallback-black-30;
+				background-color: rgba(#000, .3);
+				padding: 16px;
+			}
+		}
+
+		#highlights-content {
+			.highlights {
+				background-color: $fallback-black-30;
+				background-color: rgba(#000, .3);
+				padding: 16px;
+			}
+		}
+
+		#kpi-content {
+			> div  {
+				> div:not(.download) {
+
+					> div:first-child {
+						h4 {
+							color: white;
+							padding-bottom: 16px;
+						}
+					}
+					background-color: $fallback-black-30;
+					background-color: rgba(#000, .3);
+					padding: 16px;
+				}
+				
+			}
+		}
+		.kpi {
+			.content_wrapper {
+				
+				@include clearfix();
+
+				.chart {
+					width: 50%;
+					float: left;
+				}
+				.chart:nth-child(2) {
+					margin-top: 0;
+				}
+				.chart:nth-child(odd) {
+					padding-right: 8px;
+				}
+				.chart:nth-child(even) {
+					padding-left: 8px;
+				}
+
+				@media #{$tb-pt} {
+					.chart {
+						width: 33.33333%;
+						padding: 0 16px !important;
+					}
+					.chart:nth-child(3) {
+						margin-top: 0;
+					}
+				}
+			}
+		}
+	}
+
+	.download {
+		background-color: $fallback-black-60;
+		background-color: rgba(#000, .6);
+		padding: 16px;
+		a {
+			color: white;
+			> span:first-child {
+				color: $yellow;
+			}
+		}
+	}
+}

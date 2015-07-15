@@ -1,0 +1,285 @@
+#strategy {
+	
+	padding: 0 0 32px 0;
+	position: relative;
+	background-color: white;
+
+	@media #{$tablet} {
+		padding: 0 0 64px 0;
+		background-color: $gray_0;
+	}
+
+	@media #{$desktop} {
+		padding: 0 0 72px 0;
+	}
+
+	.wrapper {
+		padding: 0 32px;
+
+		@media #{$tablet} {
+			padding: 36px 64px 0 64px;
+		}
+		@media #{$desktop} {
+			padding: 36px 72px 0 72px;
+			max-width: 1280px;
+			margin: 0 auto;
+		}
+	}
+	> .top {
+		background-color: $gray_0;
+
+		.wrapper {
+
+			@media #{$desktop} {
+
+				@include clearfix();
+
+				> div:nth-child(2) {
+					width: 50%;
+					float: left;
+					padding-right: 32px;
+				}
+				> div:last-child {
+					width: 50% !important;
+					float: right;
+					padding-left: 8px;
+				}
+			}
+		}
+	}
+	.middle.mobile {
+		padding-top: 24px;
+		.key {
+			border-top: 1px solid $orange;
+						
+			> div:first-child {
+				position: relative;
+				span {
+					color: $orange;
+					position: absolute;
+					top: 16px;
+					right: 0;
+				}
+			}
+			> div:last-child {
+				
+				.highlights_small {
+					padding-bottom: 16px;
+				}
+
+				.highlights_small + .highlights_small, .highlights_small + h4 {
+					border-top: 1px solid $light_gray;
+					padding-top: 16px;
+				}
+			}
+		}
+		.key.closed {
+			.content_wrapper {
+				display: none;
+			}
+		}
+		h3 {
+			padding: 16px 0;
+		}
+
+	}
+
+	.key {
+		h4 {
+			padding-bottom: 4px;
+		}
+	}
+
+	.middle.desktop-tablet {
+		.key {
+			width: 100%;
+			@include clearfix();
+						
+			> div {
+				width: 50%;
+				float: left;
+
+				> div {
+					
+					background-color: white;
+					padding: 16px;
+					border-bottom: 1px solid $gray_0;
+					
+				}
+			}
+			h3 {
+				border-top: 1px solid $orange;
+				padding: 16px 0;
+			}
+			> div:first-child {
+				padding-right: 8px;
+			}
+			> div:last-child {
+				padding-left: 8px;
+			}
+		}
+		.key:last-child {
+			> div {
+				> div {
+					border: none;
+				}
+			}
+		}
+	}
+
+	.bottom .wrapper {
+		padding-top: 0;
+	}
+
+	h2 {
+		padding-top: 24px;
+	}
+	p {
+		padding: 24px 0;
+	}
+	.download {
+		padding: 16px 0;
+		border-top: 1px solid $light_gray;
+
+		@media #{$tablet} {
+			border: none;
+		}
+	}
+	#graph {
+		width: 100%;
+		padding-bottom: 24px;
+		position: relative;
+		overflow: hidden;
+
+		h3 {
+			border-top: 1px solid $orange;
+			padding-top: 16px;
+		}
+
+		.legend {
+			padding: 16px 0;
+			span {
+				font-family: 'Titillium Web', sans-serif;
+				font-size: 13px;
+				line-height: 16px;
+				color: $gray;
+				position: relative;
+				padding-left: 16px;
+			}
+
+			span:before {
+				content: '';
+				display: inline-block;
+				width: 12px;
+				height: 12px;
+				@include border-radius(6px);
+				position: absolute;
+				left: 0;
+				top: 4px;
+			}
+
+			span + span {
+				margin-left: 6px;
+			}
+
+			span:first-child:before {
+				background-color: $gray;
+			}
+
+			span:last-child:before {
+				background-color: $orange;
+			}
+			
+		}
+
+		> div:nth-child(2) {
+			width: 32px;
+			position: relative;
+			float: left;
+			span {
+				display: block;
+				width: 50%;
+				font-family: 'Titillium Web', sans-serif;
+				font-size: 13px;
+				line-height: 32px;
+				font-weight: 400;
+				text-align: right;
+				color: $gray;
+				position: absolute;
+				top: -16px;
+			}
+		}
+
+		> div:last-child {
+			width: 100%;
+			overflow-x: scroll;
+			position: relative;
+			margin-left: 32px;
+
+			@media #{$tablet} {
+				overflow-x: auto;
+				margin-left: 0;
+				padding-left: 32px;
+			}
+		}
+
+		.graph_contents {
+			min-width: 528px;
+			height: 184px;
+			position: relative;
+			.bars {
+				position: absolute;
+				width: 100%;
+				height: 133px;
+				margin-top: 27px;
+				.bar {
+					float: left;
+					height: 100%;
+					width: 5.555555%;
+					position: relative;
+					.draw {
+						width: 100%;
+						position: absolute;
+						bottom: 0;
+
+						/*max-height: 0;*/
+						@include trans(.4s);
+
+						span {
+							width: 50%;
+							display: block;
+							margin: 0 auto;
+						}
+						span:first-child {
+							background-color: $orange;
+						}
+						span:last-child {
+							background-color: $gray;
+						}
+					}
+					> span {
+						font-family: 'Titillium Web', sans-serif;
+						font-size: 9px;
+						height: 24px;
+						display: block;
+						color: $gray;
+						line-height: 24px;
+						text-align: center;
+						margin-top: 133px;
+					}
+				}
+			}
+			.back {
+				span {
+					display: block;
+					width: 100%;
+					height: 32px;
+					background-color: white;
+				}
+				span + span {
+					border-top: 1px solid $gray_0;
+				}
+			}
+		}		
+	}
+}
